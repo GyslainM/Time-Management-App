@@ -1,6 +1,7 @@
 from tasks.task import TaskManager 
 
 def main():
+    print("Welcome to your Time Management App! Let's get productive!")  # New welcome message
     print("Welcome to the Time Management App")
     task_manager = TaskManager()
 
