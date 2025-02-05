@@ -48,9 +48,18 @@ class TaskManager:
             task.edit_task(title, description, deadline)
 
     def delete_task(self, task_index):
-        """Delete a task by index"""
+        """Method to delete a task by index"""
         if task_index < 1 or task_index > len(self.tasks):
             print("Invalid task number!")
         else:
-            task = self.tasks.pop(task_index - 1)
-            print(f"Task '{task.title}' has been deleted!")
+            removed_task = self.tasks.pop(task_index - 1)
+            print(f"Task '{removed_task.title}' has been deleted successfully!")
+    
+    def mark_task_complete(self, task_index):
+        """Method to mark a task as completed"""
+        if task_index < 1 or  task_index > len(self.tasks):
+            print("Invalid task number! ")
+        else:
+            task = self.tasks[task_index -1]
+            task.completed = True
+            print(f"Task '{task.title}' marked as completed!")

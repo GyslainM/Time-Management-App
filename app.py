@@ -34,8 +34,11 @@ def main():
 
         elif choice == '4':
             task_manager.view_tasks()
-            task_index = int(input("Enter the task number to delete: "))
-            task_manager.delete_task(task_index)
+            try:
+                task_index = int(input("Enter the task number to delete: "))
+                task_manager.delete_task(task_index)
+            except ValueError:
+                print("Invalid input! Please enter valid task number.")
 
         elif choice == '5':
             task_manager.view_tasks()
@@ -43,11 +46,11 @@ def main():
             task_manager.mark_task_complete(task_index)
 
         elif choice == '6':
-            print("Goodbye!")
+            print("Exiting the program. !")
             break
 
         else:
-            print("Invalid choice, please try again.")
+            print("Invalid option, please try again.")
 
 if __name__ == "__main__":
     main()
