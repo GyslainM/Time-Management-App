@@ -18,6 +18,7 @@ Task Prioritization: Assign priority to tasks (High, Medium, Low) to better orga
 ****Technologies Used****
 Python 3.x
 No external libraries required (relies on Python standard libraries)
+
 ****How to Use****
 1. **Clone the repository:**
 git clone https://github.com/GyslainM/Time-Management-App.git
